@@ -2,20 +2,37 @@
     --main-color: rgb(13, 17, 23);
     --bgc-accent-color: rgb(1, 4, 9);
     --bgc-menu: rgb(22, 27, 34);
-    --border-color: rgb(33, 38, 45);
+    --accent-color-light: rgb(33, 38, 45);
+    --border-color: rgba(240, 246, 252, 0.1);
+
+    --input-border-color: rgb(48, 54, 61);
+
     --font-color: rgb(201, 209, 217);
+    --font-color-muted: rgb(139, 148, 158);
+
+    --font-link-color: rgb(88, 166, 255);
+
+    --danger-color: rgb(248, 81, 73);
+    --danger-bgc: rgb(218, 54, 51);
+    --danger-bgc-muted: rgba(252, 56, 56, 0.1);
+    --danger-border-muted: rgba(252, 56, 56, 0.4);
 }
 
 html, body {
     background-color: var(--main-color) !important;
 }
 
-
 body {
     background-color: var(--main-color);
     color: var(--font-color);
 
     color-scheme: normal;
+}
+
+/* ----- GENERAL LINK ----- */
+body a {
+    color: var(--font-link-color);
+    text-decoration: none;
 }
 
 /* ----- HEADER ----- */
@@ -25,29 +42,75 @@ body #topbar {
 
 /* ----- MENU ----- */
 body #leftside {
+    width: 23ex;
+
     background-color: var(--main-color);
+    z-index: 1;
 }
+
 body #leftside .menublock {
+    width: 23ex;
+
     background-color: var(--bgc-menu);
     border: 1px solid var(--border-color);
 }
 
 body .menublock .menuhead {
+    margin-top: 8px;
+    margin-bottom: 10px;
+
     background-color: var(--bgc-menu);
     border: none;
 }
 
+/* ----- LOGIN FORM ----- */
+body .menublock .menuitemnolink {
+    box-sizing: border-box;
+}
+
+body .menublock form input {
+    width: 142px;
+    margin-bottom: 10px;
+
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    border: 1px solid var(--input-border-color);
+
+    color: var(--font-color);
+    outline: none;
+}
+
+body .menublock form input.loginedit {
+    width: 120px;
+}
+
+/* ----- MAIN ELEMENT BGC ----- */
 body #rightside {
     background-color: var(--main-color);
+}
+
+/* ----- ERROR LOGIN MESSAGE ----- */
+body #error.error {
+    width: 25%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    margin-left: auto;
+    padding: 16px 20px;
+    border-radius: 5px;
+
+    background-color: var(--danger-bgc-muted);
+    border: 1px solid var(--danger-border-muted);
+
+    color: var(--font-color);
+    font-weight: 500;
 }
 
 
 body input {
     -webkit-appearance: none !important;
-}
-
-body a {
-    color: #0d6efd;
 }
 
 body table tr:first-child td.seprow {
@@ -56,7 +119,7 @@ body table tr:first-child td.seprow {
 
 body table.deftbl tr:nth-child(even) > th,
 body table.deftbl tr:nth-child(even) > td,
-body table.deftbl tr:nth-child(odd) > td{
+body table.deftbl tr:nth-child(odd) > td {
     background-color: #515151;
 }
 
@@ -64,6 +127,14 @@ body table.deftbl a {
     color: #1d7efd;
 }
 
+/* ----- MAIN PAGE WELCOME ----- */
+body #content center {
+    display: block;
+    margin: 10px auto 20px;
+    font-size: 20px;
+}
+
+/* ----- BIG STOS ----- */
 body td.dfc,
 body pre {
     background-color: var(--main-color);
@@ -71,17 +142,19 @@ body pre {
 }
 
 body pre .el .ets {
-    color: #aaa;
+    color: var(--font-color);
 }
 
 body th.resultheader,
 body td.resulttotal {
     background-color: #3f3f3f;
 }
+
 body tr.testacc,
 body pre code.dfg {
     background-color: #198754;
 }
+
 body tr.testfail,
 body pre code.dfb {
     background-color: #dc3545;
@@ -94,4 +167,9 @@ body textarea {
 
 body textarea#linenums {
     background-color: #323232;
+}
+
+/* ----- FOOTER ----- */
+body #content div:last-of-type font {
+    color: var(--font-color-muted);
 }
