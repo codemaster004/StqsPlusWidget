@@ -1,0 +1,82 @@
+:root {
+    --main-color: rgb(48, 48, 48);
+}
+
+html, body {
+    background-color: var(--main-color) !important;
+}
+
+
+body.dark {
+    background-color: #303030;
+    color: #ccc;
+
+    color-scheme: normal;
+}
+
+body.dark #leftside {
+    background-color: #303030;
+}
+body.dark #leftside .menublock {
+    background-color: #2d2d2d;
+}
+
+
+body.dark #rightside {
+    background-color: #303030;
+}
+
+
+body.dark input {
+    -webkit-appearance: none !important;
+}
+
+body.dark a {
+    color: #0d6efd;
+}
+
+body.dark table tr:first-child td.seprow {
+    background-color: #454545;
+}
+
+body.dark table.deftbl tr:nth-child(even) > th,
+body.dark table.deftbl tr:nth-child(even) > td,
+body.dark table.deftbl tr:nth-child(odd) > td{
+    background-color: #515151;
+}
+
+body.dark table.deftbl a {
+    color: #1d7efd;
+}
+
+body.dark td.dfc,
+body.dark pre {
+    background-color: #303030;
+    color: #eee;
+}
+
+body.dark pre .el .ets {
+    color: #aaa;
+}
+
+body.dark th.resultheader,
+body.dark td.resulttotal {
+    background-color: #3f3f3f;
+}
+body.dark tr.testacc,
+body.dark pre code.dfg {
+    background-color: #198754;
+}
+body.dark tr.testfail,
+body.dark pre code.dfb {
+    background-color: #dc3545;
+}
+
+body.dark textarea {
+    background-color: #343434;
+    color: #ddd;
+}
+
+body.dark textarea#linenums {
+    background-color: #323232;
+}

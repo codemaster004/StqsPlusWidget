@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "My Basic Extension",
+  "version": "1.0",
+  "description": "A simple Chrome extension.",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://stos.eti.pg.gda.pl/*"],
+      "css": ["static/StqsPlus.css"],
+      "js": ["script/StqsPlus.js"]
+    }
+  ]
+}
