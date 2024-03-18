@@ -1,5 +1,9 @@
 :root {
-    --main-color: rgb(48, 48, 48);
+    --main-color: rgb(13, 17, 23);
+    --bgc-accent-color: rgb(1, 4, 9);
+    --bgc-menu: rgb(22, 27, 34);
+    --border-color: rgb(33, 38, 45);
+    --font-color: rgb(201, 209, 217);
 }
 
 html, body {
@@ -8,22 +12,33 @@ html, body {
 
 
 body {
-    background-color: #303030;
-    color: #ccc;
+    background-color: var(--main-color);
+    color: var(--font-color);
 
     color-scheme: normal;
 }
 
+/* ----- HEADER ----- */
+body #topbar {
+    background-color: var(--bgc-accent-color);
+}
+
+/* ----- MENU ----- */
 body #leftside {
-    background-color: #303030;
+    background-color: var(--main-color);
 }
 body #leftside .menublock {
-    background-color: #2d2d2d;
+    background-color: var(--bgc-menu);
+    border: 1px solid var(--border-color);
 }
 
+body .menublock .menuhead {
+    background-color: var(--bgc-menu);
+    border: none;
+}
 
 body #rightside {
-    background-color: #303030;
+    background-color: var(--main-color);
 }
 
 
@@ -51,8 +66,8 @@ body table.deftbl a {
 
 body td.dfc,
 body pre {
-    background-color: #303030;
-    color: #eee;
+    background-color: var(--main-color);
+    color: var(--font-color);
 }
 
 body pre .el .ets {
