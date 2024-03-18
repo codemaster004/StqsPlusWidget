@@ -7,76 +7,76 @@ html, body {
 }
 
 
-body.dark {
+body {
     background-color: #303030;
     color: #ccc;
 
     color-scheme: normal;
 }
 
-body.dark #leftside {
+body #leftside {
     background-color: #303030;
 }
-body.dark #leftside .menublock {
+body #leftside .menublock {
     background-color: #2d2d2d;
 }
 
 
-body.dark #rightside {
+body #rightside {
     background-color: #303030;
 }
 
 
-body.dark input {
+body input {
     -webkit-appearance: none !important;
 }
 
-body.dark a {
+body a {
     color: #0d6efd;
 }
 
-body.dark table tr:first-child td.seprow {
+body table tr:first-child td.seprow {
     background-color: #454545;
 }
 
-body.dark table.deftbl tr:nth-child(even) > th,
-body.dark table.deftbl tr:nth-child(even) > td,
-body.dark table.deftbl tr:nth-child(odd) > td{
+body table.deftbl tr:nth-child(even) > th,
+body table.deftbl tr:nth-child(even) > td,
+body table.deftbl tr:nth-child(odd) > td{
     background-color: #515151;
 }
 
-body.dark table.deftbl a {
+body table.deftbl a {
     color: #1d7efd;
 }
 
-body.dark td.dfc,
-body.dark pre {
+body td.dfc,
+body pre {
     background-color: #303030;
     color: #eee;
 }
 
-body.dark pre .el .ets {
+body pre .el .ets {
     color: #aaa;
 }
 
-body.dark th.resultheader,
-body.dark td.resulttotal {
+body th.resultheader,
+body td.resulttotal {
     background-color: #3f3f3f;
 }
-body.dark tr.testacc,
-body.dark pre code.dfg {
+body tr.testacc,
+body pre code.dfg {
     background-color: #198754;
 }
-body.dark tr.testfail,
-body.dark pre code.dfb {
+body tr.testfail,
+body pre code.dfb {
     background-color: #dc3545;
 }
 
-body.dark textarea {
+body textarea {
     background-color: #343434;
     color: #ddd;
 }
 
-body.dark textarea#linenums {
+body textarea#linenums {
     background-color: #323232;
 }
