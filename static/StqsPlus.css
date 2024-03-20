@@ -88,6 +88,7 @@ body .menublock form input.loginedit {
 /* ----- MAIN ELEMENT BGC ----- */
 body #rightside {
     background-color: var(--main-color);
+    padding-left: 30px;
 }
 
 /* ----- ERROR LOGIN MESSAGE ----- */
