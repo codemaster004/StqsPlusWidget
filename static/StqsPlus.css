@@ -136,21 +136,65 @@ body #error.error {
     font-weight: 500;
 }
 
-
-body table tr:first-child td.seprow {
-    background-color: #454545;
+/* ----- TABLE ----- */
+body table.deftbl {
+    background-color: var(--main-color);
 }
 
-body table.deftbl tr:nth-child(even) > th,
-body table.deftbl tr:nth-child(even) > td,
-body table.deftbl tr:nth-child(odd) > td {
-    background-color: #515151;
+body table.deftbl tbody {
+    display: block;
+    overflow: hidden;
+
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
-body table.deftbl a {
-    color: #1d7efd;
+body table.deftbl tr.seprow td.seprow {
+    background-color: var(--bgc-menu);
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
+tr.trow {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+th.tcol { /* Separate to catch only the stupid first info row under table header */
+    background-color: var(--bgc-menu);
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+body table.deftbl tbody tr.trow {
+    background-color: var(--main-color);
+}
+
+body table.deftbl tbody tr.trow th,
+body table.deftbl tbody tr.trow td {
+    padding: 3px 6px;
+}
+
+body table.deftbl tbody tr.trow td {
+    border-left: none;
+    border-right: none;
+}
+
+body table.deftbl tbody tr.trow td:nth-of-type(4) a {
+    color: var(--font-color);
+}
+
+/*
+violet: rgb(110, 64, 201)
+green: rgb(63, 185, 80)
+oceanish: rgb(51, 179, 174)
+pink: rgb(247, 120, 186)
+background: rgb(237,104,96);
+background: linear-gradient(90deg, rgba(237,104,96,1) 0%, rgba(155,60,185,1) 50%, rgba(51,179,174,1) 100%);
+
+background: rgb(245,77,77);
+background: linear-gradient(90deg, rgba(245,77,77,1) 0%, rgba(255,185,86,1) 50%, rgba(167,88,221,1) 100%);
+*/
 /* ----- MAIN PAGE WELCOME ----- */
 body #content center {
     display: block;
