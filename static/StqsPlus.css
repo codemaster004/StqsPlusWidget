@@ -29,6 +29,11 @@ body {
     color-scheme: normal;
 }
 
+/* ----- INPUT ----- */
+body input {
+    -webkit-appearance: none !important;
+}
+
 /* ----- GENERAL LINK ----- */
 body a {
     color: var(--font-link-color);
@@ -53,14 +58,36 @@ body #leftside .menublock {
 
     background-color: var(--bgc-menu);
     border: 1px solid var(--border-color);
+    border-radius: 6px;
+
+    box-shadow: none;
 }
 
 body .menublock .menuhead {
-    margin-top: 8px;
-    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
     background-color: var(--bgc-menu);
     border: none;
+    border-bottom: 1px solid var(--border-color);
+
+    font-weight: 700;
+    font-size: 17px;
+}
+
+body .menublock .menuitem {
+    padding: 2px 0;
+}
+
+body .menublock .menuitem a {
+    color: var(--font-color);
+}
+
+body .menublock .menuitem:hover a {
+    background-color: var(--bgc-menu);
+    color: var(--font-color);
+    font-weight: 500;
+    text-decoration: underline  ;
 }
 
 /* ----- LOGIN FORM ----- */
@@ -109,10 +136,6 @@ body #error.error {
     font-weight: 500;
 }
 
-
-body input {
-    -webkit-appearance: none !important;
-}
 
 body table tr:first-child td.seprow {
     background-color: #454545;
