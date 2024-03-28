@@ -14,13 +14,14 @@ window.onload=function() {
         errorDiv.style.display = "none";
     }
 
-    let gradientColors = [[237,104,96], [155,60,185], [78,166,96]]
+    let gradientColors = [[237,104,96], [155,60,185], [78,166,153]]
     document.querySelectorAll("td").forEach((element) => {
         if (element.classList.length > 0 && element.classList[0].includes("score")) {
             let aScore = element.querySelector("a")
             if (aScore === null) {
                 return;
             }
+            // aScore.innerHTML = `${Math.round(Math.random() * 100)}.00%`;
             let score = aScore.innerHTML;
             let precent = parseFloat(score.trim()) / 100;
             console.log(precent);
