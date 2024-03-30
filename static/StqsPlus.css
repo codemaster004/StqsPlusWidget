@@ -23,7 +23,7 @@
     --test-correct-bgc: rgb(84, 183, 118);
     --test-correct-color: rgb(255, 255, 255);
 
-    --test-error-bgc: rgb(173, 78, 201);
+    --test-error-bgc: rgb(147, 48, 176);
     --test-error-color: rgb(255, 255, 255);
 }
 
@@ -282,6 +282,12 @@ body textarea {
 
 body textarea#linenums {
     background-color: #323232;
+}
+
+/* ----- RESULT ERROR ----- */
+
+body #infofile .el.err .ets {
+    background-color: var(--test-error-bgc);
 }
 
 /* ----- FOOTER ----- */
