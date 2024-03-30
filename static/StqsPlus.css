@@ -16,6 +16,15 @@
     --danger-bgc: rgb(218, 54, 51);
     --danger-bgc-muted: rgba(252, 56, 56, 0.1);
     --danger-border-muted: rgba(252, 56, 56, 0.4);
+
+
+    /* ----- TEST SPECIFIC COLOURS ----- */
+
+    --test-correct-bgc: rgb(84, 183, 118);
+    --test-correct-color: rgb(255, 255, 255);
+
+    --test-error-bgc: rgb(173, 78, 201);
+    --test-error-color: rgb(255, 255, 255);
 }
 
 html, body {
@@ -213,19 +222,57 @@ body pre .el .ets {
     color: var(--font-color);
 }
 
+/* ----- RESULT TABLE ----- */
+
+body #result .resulttable {
+    border: none;
+    border-radius: 5px;
+}
+
+body #result .resulttable tbody {
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+body #result .resulttable .trow .resultheader {
+    border: none;
+    border-radius: 1px solid var(--border-color);
+    padding: 4px 8px;
+}
+
+body #result .resulttable .trow .testacc td,
+body #result .resulttable .trow .testfail td {
+    border: 1px solid var(--bgc-menu);
+}
+
 body th.resultheader,
-body td.resulttotal {
-    background-color: #3f3f3f;
+body td.resulttotal,
+body .dft .dh2 {
+    background-color: var(--bgc-menu);
+    padding: 5px;
+}
+
+body table.dft tbody {
+    overflow: hidden;
+}
+
+body table.dft th,
+body table.dft td {
+    border: 1px solid var(--border-color);
 }
 
 body tr.testacc,
 body pre code.dfg {
-    background-color: #198754;
+    background-color: var(--test-correct-bgc);
+    color: var(--test-correct-color);
 }
 
 body tr.testfail,
 body pre code.dfb {
-    background-color: #dc3545;
+    background-color: var(--test-error-bgc);
+    color: var(--test-error-color);
 }
 
 body textarea {
